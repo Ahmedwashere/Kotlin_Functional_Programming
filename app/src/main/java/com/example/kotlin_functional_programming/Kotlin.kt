@@ -112,6 +112,30 @@ fun main() {
         }'."
     )
 
+    // Using the fold operation in Kotlin
+    println("\n Another one is fold. " +
+            "Fold is just like reduce, but you can specify the actual value of the accumulator. \n")
+
+    println("The value of the accumulator is specified by us when using fold!")
+    println("In this example I'll set the inital value of my accumulator to -100.")
+    println("Adding -100 and the sum of all the elements in the list of $numbers is: "
+            + numbers.fold(0) {sum, element -> sum + element})
+
+
+    println("\n" + "-".repeat(200))
+    println("-".repeat(200))
+
+    // Lastly, we can also easily create maps (or dictionaries) using functional programming!
+    println("Lastly, we can also easily create maps (aka dictionaries) using functional programming!")
+    println("\nI want to map the name of a student to their age. \nBut only for students " +
+            "whose credit hours is 100 or higher: \n"
+            + students
+                .filter { it.creditHours >= 100 }
+                .associate { student -> student.name to student.age })
+
+    println("\n" + "-".repeat(200))
+    println("-".repeat(200))
+
 
 
 }
